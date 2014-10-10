@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpeDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<collectionReader>
+		<collectionIterator>
+			<descriptor>
+				<import location="descriptors/collectionReaderDescriptor.xml" />
+			</descriptor>
+		</collectionIterator>
+	</collectionReader>
+	<casProcessors casPoolSize="1" processingUnitThreadCount="1">
+		<casProcessor deployment="integrated" name="AEDescriptor">
+			<descriptor>
+				<import location="descriptors/aeDescriptor.xml" />
+			</descriptor>
+		</casProcessor>
+		<casProcessor deployment="integrated" name="BEDescriptor">
+			<descriptor>
+				<import location="descriptors/beDescriptor.xml" />
+			</descriptor>
+		</casProcessor>
+		
+		<casProcessor deployment="integrated" name="ConsumeristDescriptor">
+			<descriptor>
+				<import location="descriptors/casConsumerDescriptor.xml" />
+			</descriptor>
+		</casProcessor>
+	</casProcessors>
+	<cpeConfig>
+		<numToProcess>-1</numToProcess>
+		<deployAs>immediate</deployAs>
+		<checkpoint batch="0" time="300000ms" />
+		<timerImpl />
+	</cpeConfig>
+</cpeDescription>
