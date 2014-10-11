@@ -7,7 +7,11 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
 
 import abner.Tagger;
-
+/**
+ * I use abner here
+ * @author hanz
+ *
+ */
 public class AbnerAnnotator extends JCasAnnotator_ImplBase {
   private Tagger tagger;
   
@@ -15,7 +19,10 @@ public class AbnerAnnotator extends JCasAnnotator_ImplBase {
   public void initialize(org.apache.uima.UimaContext aContext) throws org.apache.uima.resource.ResourceInitializationException {
     tagger = new Tagger();
   };
-  
+  /**
+   * I constrain on the length as Abner sometimes prefer longer names, which is not what we want.
+   * I constrain it on length 10.
+   */ 
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     String doc = aJCas.getDocumentText();
