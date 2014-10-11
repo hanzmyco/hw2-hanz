@@ -52,7 +52,7 @@ public class JCSub extends JCasAnnotator_ImplBase {
    * @param u   end index
    * @return   number of spaces of substring s[0:u]
    */
-  private static int Spaces(String s,int u)
+  public static int Spaces(String s,int u)
   {
     return StringUtils.countMatches(s.substring(0, u), " ");
   }

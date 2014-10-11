@@ -5,6 +5,8 @@ import hanz.types.SID;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
@@ -48,9 +50,14 @@ public class OutConsumer extends CasConsumer_ImplBase {
       String sentenceID = ((SID) jc.getJFSIndexRepository().getAllIndexedFS(SID.type).get()).getId();
       
       FSIterator<TOP> namedIt = jc.getJFSIndexRepository().getAllIndexedFS(NE.type);
+      Set<String> s = new HashSet<String>();
       while(namedIt.hasNext()) {
         NE ne = (NE)namedIt.get();
-        fw.write(sentenceID + "|" + ne.getBegin() + " " + ne.getEnd() + "|" + ne.getNEString() + "\n");
+        String gene = sentenceID + "|" + ne.getBegin() + " " + ne.getEnd() + "|" + ne.getNEString() + "\n";
+        if (!s.contains(gene)) {
+          fw.write(gene);
+          s.add(gene);
+        }
         namedIt.next();
       }
     } catch (Exception e) {
