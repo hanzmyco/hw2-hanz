@@ -19,7 +19,7 @@
 			<nameValuePair>
 				<name>out</name>
 				<value>
-					<string>src/main/resources/data/hw2-hanz.out</string>
+					<string>hw2-hanz.out</string>
 				</value>
 			</nameValuePair>
 		</configurationParameterSettings>

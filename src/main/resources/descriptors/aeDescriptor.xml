@@ -5,9 +5,9 @@
 	<annotatorImplementationName>hanz.ner.JCSub</annotatorImplementationName>
 	<analysisEngineMetaData>
 		<name>aeDescriptor</name>
-		<description />
+		<description/>
 		<version>1.0</version>
-		<vendor />
+		<vendor/>
 		<configurationParameters>
 			<configurationParameter>
 				<name>InpuString</name>
@@ -20,22 +20,22 @@
 			<nameValuePair>
 				<name>InpuString</name>
 				<value>
-					<string>model/gene.HmmChunker</string>
+					<string>/model/gene.HmmChunker</string>
 				</value>
 			</nameValuePair>
 		</configurationParameterSettings>
 		<typeSystemDescription>
 			<imports>
-				<import name="descriptors.typeSystemDescriptor" />
+				<import name="descriptors.typeSystemDescriptor"/>
 			</imports>
 		</typeSystemDescription>
-		<typePriorities />
-		<fsIndexCollection />
+		<typePriorities/>
+		<fsIndexCollection/>
 		<capabilities>
 			<capability>
-				<inputs />
-				<outputs />
-				<languagesSupported />
+				<inputs/>
+				<outputs/>
+				<languagesSupported/>
 			</capability>
 		</capabilities>
 		<operationalProperties>
@@ -44,5 +44,5 @@
 			<outputsNewCASes>false</outputsNewCASes>
 		</operationalProperties>
 	</analysisEngineMetaData>
-	<resourceManagerConfiguration />
+	<resourceManagerConfiguration/>
 </analysisEngineDescription>
